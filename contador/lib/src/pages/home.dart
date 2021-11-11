@@ -1,6 +1,3 @@
-
-import 'package:flutter/material.dart';
-
 import 'package:flutter/material.dart';
 
 
@@ -15,14 +12,20 @@ class Home extends StatelessWidget{
         title: Text("Título"),
         centerTitle: true,
       ),
-      body: Center(//Contenido de la pagina.
-        child: Column( //Widet que acomoda a sus hijos verticalmente.
+      body: Center(//Contenido de la página.
+        child: Column( //Widget que acomoda a sus hijos verticalmente.
           mainAxisAlignment: MainAxisAlignment.center, //Propiedad que indica donde se posicionan los hijos de la columna.  
-          children: [//Lista de hijos que se dibujan ono debajo de otro.
+          children: [//Lista de hijos que se dibujan uno debajo de otro.
             Text("Número de clicks:", style: textFontSize),
             Text("0",style: textFontSize)
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(//Botón flotante.
+        child: Icon(Icons.add), //Se dibuja un icono en el hijo del botón flotante.
+        onPressed: () { //Función obligatoria para un botón flotante que se ejecuta cuando es presionado.
+
+        },
       ),
     );
   }
