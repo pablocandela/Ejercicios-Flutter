@@ -11,11 +11,16 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
       ),
       body: Center(
+        //Botón que sirve para cerrar la sesión. En este caso regresar a la pantalla 
+        //de inicio en donde se requiere autenticarse para volver a tener accesos a
+        //esta página.
         child: TextButton(
           child: Text("Cerrar Sesión"),
+          //Al presionar el botón se navega a la pantalla de inicio.
           onPressed: () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => FingerPrintTest()),
           ),
+          //Estilos del botón.
           style: TextButton.styleFrom(
             primary: Colors.black,
             backgroundColor: Colors.purple,
@@ -31,11 +36,11 @@ class HomePage extends StatelessWidget {
               icon: Icon(Icons.home),
             ),
             BottomNavigationBarItem(
-              title: Text("Search"),
+              title: Text("Buscar"),
               icon: Icon(Icons.search),
             ),
             BottomNavigationBarItem(
-              title: Text("Profile"),
+              title: Text("Perfil"),
               icon: Icon(Icons.account_circle),
             ),
           ],
